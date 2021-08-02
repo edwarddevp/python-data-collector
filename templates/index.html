@@ -11,13 +11,14 @@
     <div class="container">
       <h1>Collecting Height</h1>
       <h3>Please fill the entries to get population statistics on heightt</h3>
-      <form action="success.html" method="POST">
+
+      <form action="{{url_for('success')}}" method="POST">
         <div class="input-container">
           <input
             class="input"
             type="email"
             title="Enter your email address"
-            placeholder="Enter your email address"
+            placeholder="Enter your email addres s"
             name="email_input"
             required
           />
@@ -31,6 +32,7 @@
             max="300"
             required
           />
+          <div class="message">{{text | safe}}</div>
           <button type="submit" class="submit-button">Submit</button>
         </div>
       </form>
